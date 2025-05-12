@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - My Tech Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/blog.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Tech Blog</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Blog Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Latest Blog Posts</h1>
+            <p>Explore our collection of articles on technology and web development</p>
+        </div>
+    </section>
+
+    <!-- Blog Filters -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search articles...">
+                <button id="search-button" aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="javascript">JavaScript</button>
+                <button class="filter-btn" data-category="css">CSS</button>
+                <button class="filter-btn" data-category="html">HTML</button>
+                <button class="filter-btn" data-category="ai">AI</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="posts-grid" id="blog-posts-container">
+                <!-- Posts will be loaded dynamically via JavaScript -->
+                <article class="post-card" data-category="javascript">
+                    <div class="post-image">
+                        <img src="images/blog-1.jpg" alt="JavaScript Frameworks in 2025">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">May 10, 2025</span>
+                        <h3>JavaScript Frameworks in 2025</h3>
+                        <p>Exploring the most popular JavaScript frameworks and libraries in 2025 and how they shape modern web development.</p>
+                        <a href="posts/javascript-frameworks.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post-card" data-category="ai">
+                    <div class="post-image">
+                        <img src="images/blog-2.jpg" alt="The Rise of AI in Web Development">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">May 5, 2025</span>
+                        <h3>The Rise of AI in Web Development</h3>
+                        <p>How artificial intelligence is transforming the way we build websites and web applications.</p>
+                        <a href="posts/ai-web-development.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post-card" data-category="css">
+                    <div class="post-image">
+                        <img src="images/blog-3.jpg" alt="CSS Best Practices">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">April 28, 2025</span>
+                        <h3>CSS Best Practices for 2025</h3>
+                        <p>The latest techniques and best practices for writing efficient, maintainable CSS code.</p>
+                        <a href="posts/css-best-practices.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post-card" data-category="html">
+                    <div class="post-image">
+                        <img src="images/blog-4.jpg" alt="HTML Semantics and Accessibility">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">April 20, 2025</span>
+                        <h3>HTML Semantics and Accessibility</h3>
+                        <p>Why semantic HTML matters and how to build more accessible websites.</p>
+                        <a href="posts/html-semantics.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post-card" data-category="javascript">
+                    <div class="post-image">
+                        <img src="images/blog-5.jpg" alt="Modern JavaScript Features">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">April 15, 2025</span>
+                        <h3>Modern JavaScript Features Every Developer Should Know</h3>
+                        <p>A deep dive into the essential JavaScript features that have transformed the language in recent years.</p>
+                        <a href="posts/modern-javascript.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post-card" data-category="ai">
+                    <div class="post-image">
+                        <img src="images/blog-6.jpg" alt="AI Tools for Developers">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-date">April 8, 2025</span>
+                        <h3>AI Tools Every Web Developer Should Use</h3>
+                        <p>A curated list of AI-powered tools that can boost your productivity as a web developer.</p>
+                        <a href="posts/ai-tools-developers.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <button id="load-more" class="btn">Load More Posts</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>About Tech Blog</h3>
+                    <p>A blog dedicated to sharing knowledge about web development, programming, and technology.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fas fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fas fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fas fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fas fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><span>Email:</span> info@techblog.com</p>
+                    <p><span>Phone:</span> +1 123 456 7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tech Blog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
